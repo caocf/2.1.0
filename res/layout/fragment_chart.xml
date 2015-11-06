@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:background="@color/font_white_one"
+                >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一周趋势图"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/main_imred"
+        />
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:text="暂无数据"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/main_imred"
+        />
+    
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        >
+    </lecho.lib.hellocharts.view.LineChartView>
+   
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

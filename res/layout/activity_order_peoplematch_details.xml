@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/font_white_one"
+        android:orientation="vertical" >
+
+        <include layout="@layout/head_common_layout" /> 
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/settextview"
+                    android:orientation="vertical" >
+
+                    <!-- 人工参与撮合界面 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <com.mysteel.banksteel.view.ui.CircleImageView
+                                android:id="@+id/circleimageview"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/nologin" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="20dp" >
+
+                                <TextView
+                                    android:id="@+id/tv_view_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="钢银小丽"
+                                    android:textColor="@color/font_black_one"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:id="@+id/img_grade"
+                                    android:layout_width="45dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/tv_view_name"
+                                    android:background="@drawable/member_gold" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_view_introduce"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:gravity="center_vertical"
+                                android:text="上海钢银交易中心"
+                                android:textColor="@color/font_black_two"
+                                android:textSize="12sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp" >
+
+                                <ImageView
+                                    android:id="@+id/img_stars"
+                                    android:layout_width="50dp"
+                                    android:layout_height="10dp"
+                                    android:background="@drawable/stars"
+                                    android:layout_centerVertical="true" />
+
+                                <TextView
+                                    android:id="@+id/tv_view_times"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_toRightOf="@+id/img_stars"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="17次"
+                                    android:textColor="@color/font_black_one"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/footer_color" />
+
+                    <!-- 带图标、查看凭证 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:gravity="center_vertical" >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@color/font_blue"
+                                android:src="@drawable/constructionsteel" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical|bottom"
+                                android:singleLine="true"
+                                android:text="四级螺纹钢  HRB400 22*12"
+                                android:textColor="@color/font_black_one"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical|top"
+                                android:singleLine="true"
+                                android:text="50吨  ￥2850/吨"
+                                android:textColor="@color/orange"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|right" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/font_blue"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="查看凭证"
+                                android:textColor="@color/font_white_one"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/footer_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="交易双方"
+                        android:textColor="@color/font_color"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/footer_color" />
+
+                    <!-- 买家布局 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center" >
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/buyer" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:text="买家"
+                                android:textColor="@color/font_blue"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- 右边文字的布局 -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_play_name_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical|bottom"
+                                android:text="白崇禧    13424386677"
+                                android:textColor="@color/font_black_one"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_play_company"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:text="上海宁厂电子商务有限公司"
+                                android:textColor="@color/font_black_two"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 卖家布局 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center" >
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/seller" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:text="卖家"
+                                android:textColor="@color/orange"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <!-- 右边文字的布局 -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_sell_name_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical|bottom"
+                                android:text="方玉玺    18743662538"
+                                android:textColor="@color/font_black_one"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_sell_company"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:text="上海春雨钢铁国际贸易有限公司"
+                                android:textColor="@color/font_black_two"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/footer_color" />
+
+                    <!-- 底部交易明细 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="交易明细"
+                            android:textColor="@color/font_color"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/footer_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:text="四级螺纹钢  HRB400 22*12 50吨"
+                                android:textColor="@color/font_black_one"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="￥ 2850/吨"
+                                android:textColor="@color/font_red_one"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/bg_green_one"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="上传凭证"
+                            android:textColor="@color/font_white_one"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/footer_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="提示：订单已审核通过，待评价!"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/font_blue"
+                    android:gravity="center"
+                    android:text="提交订单"
+                    android:textColor="@color/font_white_one"
+                    android:textSize="20sp" />
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

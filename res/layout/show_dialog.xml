@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+    
+    <LinearLayout 
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+    	android:background="@drawable/box_red_white_bg_fine"
+        >
+        <TextView
+            android:id="@+id/tv_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+            android:text="你确定要删除这些信息吗？"
+            android:gravity="center"
+            android:textColor="@color/font_black_one"
+            android:textSize="16sp"
+            />
+        
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="20dp"
+        >
+           <TextView 
+                android:id="@+id/tv_cancle"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:padding="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+                android:text="取消"
+                android:textColor="@color/font_white_one"
+				android:background="@drawable/box_gray_solid"
+               />
+           
+            <TextView 
+                android:id="@+id/tv_ok"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:padding="10dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+                android:text="确定"
+                android:textColor="@color/font_white_one"
+				android:background="@drawable/box_red_solid"               
+               />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

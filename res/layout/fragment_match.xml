@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_layout_left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/font_white_one">
+
+
+    <com.mysteel.banksteel.view.ui.XListView
+        android:id="@+id/lv_list"
+        android:layout_below="@+id/ll_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.2dp"
+        android:footerDividersEnabled="false">
+    </com.mysteel.banksteel.view.ui.XListView>
+
+
+
+</RelativeLayout>

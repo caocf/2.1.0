@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/font_white_one"
+    >
+
+    <com.mysteel.banksteel.view.ui.XListView
+        android:id="@+id/xlistview"
+        android:layout_above="@+id/ll_del_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:footerDividersEnabled="false"
+        android:listSelector="@drawable/layout_item_selector"
+        android:visibility="gone"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        >
+    </com.mysteel.banksteel.view.ui.XListView>
+    
+    
+     <LinearLayout 
+        android:id="@+id/ll_del_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+	        <View 
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/main_imred"
+	            />
+	        
+	         <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+        		android:padding="15dp"
+		        android:orientation="horizontal"
+		        android:gravity="center_vertical"
+		        >
+		        
+		        <LinearLayout 
+		            android:id="@+id/ll_selall_layout"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+		        	android:orientation="horizontal"
+		        	android:gravity="center_vertical">
+		            
+		            <ImageView 
+		                android:id="@+id/iv_ischeck"
+				        android:layout_width="25dp"
+				        android:layout_height="25dp"
+		                android:src="@drawable/msg_uncheck"
+		                />
+		            <TextView 
+		                android:id="@+id/tv_ischeck"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+		                android:text="全选"
+		                android:textSize="18sp"
+		                android:textColor="@color/font_black_two"
+		                android:layout_marginLeft="5dp"
+		                />
+		        </LinearLayout>
+		        
+		        <TextView 
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+		                android:text="确定删除选中内容"
+		                android:textSize="15sp"
+		                android:textColor="@color/font_black_one"
+		                android:layout_marginLeft="20dp"
+		                />
+		        
+		        <LinearLayout 
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:gravity="center"
+				        >
+		            
+		             <TextView 
+			            android:id="@+id/tv_ok"
+			            android:layout_width="70dp"
+			            android:layout_height="30dp"
+			            android:gravity="center"
+			            android:text="确认"
+			            android:textSize="16sp"
+			            android:textColor="@color/font_white_one"
+			            android:background="@drawable/findfood"
+			            android:layout_marginLeft="20dp"
+			            />
+		            
+		        </LinearLayout>
+		        
+		    </LinearLayout>
+         
+      </LinearLayout>
+    
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_nullmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/msg_nomsg" 
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="您还没有收到任何系统消息"
+            android:textColor="@color/font_black_two"
+            android:textSize="16sp" />
+        
+        
+        <TextView 
+            android:id="@+id/tv_qiugou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="我要求购"
+            android:textSize="16sp"
+            android:textColor="@color/font_blue"
+            android:background="@drawable/box_blue"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_qiangdan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="我要抢单"
+            android:textSize="16sp"
+            android:textColor="@color/main_imred"
+            android:background="@drawable/box_red"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>

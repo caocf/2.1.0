@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/talk_bg_02"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/title_list"
+        android:layout_width="120dp"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/font_black_one"
+        android:padding="3dp"
+        android:scrollingCache="false"/>
+
+    <!--android:listSelector="@drawable/popup_item_selector"-->
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/font_white_one"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/head_common_layout"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pinjia_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_layout"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="请您对我们的服务作出评价"
+            android:textColor="@color/font_black_one"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/inside_gray_little"
+            ></View>
+
+
+        <!-- 总评分 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="到货及时性："
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+            <RatingBar
+                android:id="@+id/rb_pingfen"
+                style="@style/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="3"
+                />
+        </LinearLayout>
+
+        <!-- 货源真实 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="运输质量："
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+            <RatingBar
+                android:id="@+id/rb_huo"
+                style="@style/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="3"/>
+        </LinearLayout>
+
+        <!-- 价格真实 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="服务满意度："
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+            <RatingBar
+                android:id="@+id/rb_price"
+                style="@style/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="3"/>
+        </LinearLayout>
+
+
+        <!-- 输入评价 -->
+
+        <LinearLayout
+            android:id="@+id/layout_edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/settextview"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_pingjia"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@null"
+                android:gravity="top"
+                android:imeOptions="actionDone"
+                android:lineSpacingExtra="3.0dp"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="10.0dp"
+                android:paddingTop="10.0dp"
+                android:hint="请填写您的评价"
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_cancle"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:background="@drawable/set_btn_gray"-->
+            <!--android:text="取  消"-->
+            <!--android:textColor="@color/font_white_one"-->
+            <!--android:textSize="18sp"/>-->
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/set_btn_red"
+                android:text="完   成"
+                android:textColor="@color/font_white_one"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

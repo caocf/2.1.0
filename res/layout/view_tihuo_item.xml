@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingBottom="15dp"
+        >
+        <ImageView
+            android:id="@+id/iv_ischeck"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/msg_check"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/iv_ischeck"
+            android:layout_marginLeft="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_blue"
+                    android:gravity="center_vertical"
+                    android:text="二级螺纹钢"
+                    />
+                <TextView
+                    android:id="@+id/tv_material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="HR400"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_spec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="16*12"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:gravity="center_vertical"
+                    android:text="1800元/吨"
+                    />
+                <TextView
+                    android:id="@+id/tv_ware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="荣盛仓库"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_yiti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:gravity="center_vertical"
+                    android:text="已提0件"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_black_two"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:text="可提"
+                    />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_gray_right_angle"
+                    android:layout_marginLeft="10dp"
+                    >
+                    
+                    <TextView
+                        android:id="@+id/tv_reduce"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1"
+                        android:text="—"
+                        android:textSize="30sp"
+                        android:textColor="@color/font_black_two"
+                        />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D1D1D1"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:text="10"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D1D1D1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_add"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:textSize="30sp"
+                        android:textColor="@color/font_black_two"
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/font_black_two"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.mysteel.banksteeltwo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/ll_commom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="5dp" >
+
+        <com.mysteel.banksteel.view.ui.CircleImageView
+            android:id="@+id/iv_common_portrait"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/item_commen_portrait"
+            app:border_color="#ffffff"
+            app:border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_common_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="张三"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_common_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="刚银小哥真给力!"
+                android:textColor="@color/font_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/font_gray"
+            android:text="交易" />
+
+        <TextView
+            android:id="@+id/tv_common_transactionnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="1"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/font_gray"
+            android:text="次" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_common_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/ll_commom"
+        android:text="2分钟前" 
+        android:textColor="@color/font_gray"
+        />
+
+</RelativeLayout>

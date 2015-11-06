@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/font_white_one">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E7DDDD"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="购买信息填写"
+            android:textColor="@color/font_black_one"
+            android:textSize="18sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/box_gray">
+
+            <ImageView
+                android:id="@+id/img_quote"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/transportnum"/>
+
+            <EditText
+                android:id="@+id/et_buy_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/tv_danwei"
+                android:layout_toRightOf="@+id/img_quote"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="请输入您的购买数量"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="2dp"
+                android:textColorHint="@color/font_black_two"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_danwei"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="   吨"
+                android:textColor="@color/font_black_one"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="*与卖家协商后可手动修改成交价格,也可选择面议*"
+            android:textColor="@color/font_gray"
+            android:textSize="12sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_buyprice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/box_gray">
+
+            <ImageView
+                android:id="@+id/img_price"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/quote"/>
+
+            <EditText
+                android:id="@+id/et_buy_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/tv_danwei2"
+                android:layout_toRightOf="@+id/img_price"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="请输入您的购买价格"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="2dp"
+                android:textColor="@color/main_imred"
+                android:textColorHint="@color/font_black_two"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_danwei2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="元/吨"
+                android:textColor="@color/font_black_one"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img_switch"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/img_swich1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="*选择价格面议,订单最终以上传凭证的金额为准*"
+            android:textColor="@color/main_imred"
+            android:textSize="12sp"
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/findfood"
+            android:text="确定购买"
+            android:textColor="@color/font_white_one"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/findfoodup"
+            android:text="取消"
+            android:textColor="@color/font_white_one"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

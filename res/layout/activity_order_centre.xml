@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:fitsSystemWindows="true"
+                android:id="@+id/re_order_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/head_common_layout"/>
+
+    <!-- 头部 -->
+
+    <LinearLayout
+        android:id="@+id/ll_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/include_layout"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_qiugou"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_qiugou"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/current_down"
+                android:gravity="center"
+                android:text="求购单"
+                android:textColor="@color/main_imred"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_font_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_yixiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_yixiang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_up"
+                android:gravity="center"
+                android:text="意向单"
+                android:textColor="@color/main_font_gray"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_font_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_wancheng"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wangcheng"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_up"
+                android:gravity="center"
+                android:text="已完成订单"
+                android:textColor="@color/main_font_gray"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.mysteel.banksteel.view.ui.SwipeListView
+        android:id="@+id/lv_list"
+        android:layout_below="@+id/ll_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.2dp"
+        android:footerDividersEnabled="false">
+    </com.mysteel.banksteel.view.ui.SwipeListView>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layout_head"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:layout_below="@+id/include_layout"-->
+    <!--android:orientation="horizontal" >-->
+<!-- android:divider="@drawable/layout_item_selector"-->
+    <!--&lt;!&ndash; 全部订单 &ndash;&gt;-->
+<!--android:fadingEdge="none"
+        android:listSelector="@android:color/transparent" -->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layout_all_order"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1" >-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_all_order"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_toLeftOf="@+id/tv_all_order"-->
+    <!--android:background="@drawable/all_order_down" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_all_order"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="全部订单"-->
+    <!--android:textColor="@color/orange"-->
+    <!--android:textSize="18sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--&lt;!&ndash; 待评价 &ndash;&gt;-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layout_stay_assess"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1" >-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_stay_assess"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_toLeftOf="@+id/tv_stay_assess"-->
+    <!--android:background="@drawable/stay_assess_up" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_stay_assess"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="待评价"-->
+    <!--android:textColor="@color/title_color"-->
+    <!--android:textSize="18sp" />-->
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash; 移动的横线 &ndash;&gt;-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/img_xian"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:layout_below="@+id/layout_head" >-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_marginTop="1dp"-->
+    <!--android:background="@color/line_general"-->
+    <!--android:scaleType="center" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/bottom_arrow"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:src="@color/orange" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/pager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/img_xian" />-->
+
+</RelativeLayout>

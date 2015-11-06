@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_layout_wantbuy"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_selector_item"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Re_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--android:text="三级螺纹钢 HDR300E 50"-->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/tv_state"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:text="已收到报价"
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Re_layout_zhong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--android:text="安丰 12.0吨 上海"-->
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/main_imred"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Re_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- android:text="2015.07.25 15:10发布"-->
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_yijia"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

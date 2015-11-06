@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+     <!-- <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:tag="Bottom2" >
+        
+        <LinearLayout 
+            android:id="@+id/ll_item_phone"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+	        android:background="#FF5556"
+            android:padding="10dp"
+            >
+            
+            <ImageView
+	            android:id="@+id/item_phone"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/item_phone" />
+            
+            <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+                android:text="拨打电话"
+                android:textColor="@color/font_white_one"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                />
+            
+        </LinearLayout>
+
+        
+        <LinearLayout 
+            android:id="@+id/ll_item_msg"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+	        android:background="#FC6C64"
+            android:padding="10dp"
+            >
+            
+            <ImageView
+	            android:id="@+id/item_msg"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/item_msg" />
+            
+            <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+                android:text="在线沟通"
+                android:textColor="@color/font_white_one"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                />
+            
+        </LinearLayout>
+    </LinearLayout> -->
+    
+    <LinearLayout
+        android:id="@+id/item_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+		
+        <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent">
+            
+            <TextView 
+                android:id="@+id/tv_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="7dp"
+                android:singleLine="true"
+		        android:text="三级螺纹钢"
+		        android:textColor="@color/font_black_one"
+		        android:textSize="15sp"
+                />
+            
+            <TextView 
+                android:id="@+id/tv_type"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="7dp"
+		        android:layout_below="@+id/tv_name"
+				android:singleLine="true"
+		        android:text="HDR300E"
+		        android:textColor="@color/font_black_one"
+		        android:textSize="15sp"
+                />
+            
+            <TextView 
+                android:id="@+id/tv_num"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="7dp"
+                android:layout_below="@+id/tv_name"
+		        android:layout_toRightOf="@+id/tv_type"
+		        android:layout_marginLeft="10dp"
+				android:singleLine="true"		
+		        android:text="50"
+		        android:textColor="@color/font_black_one"
+		        android:textSize="15sp"
+                />
+            
+             <TextView 
+                android:id="@+id/tv_price"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+                android:gravity="right"
+		        android:layout_toLeftOf="@+id/tv_unit"
+		        android:layout_marginRight="7dp"
+		        android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="4500"
+		        android:textColor="@color/main_imred"
+		        android:textSize="20sp"
+                />
+            <TextView 
+                android:id="@+id/tv_unit"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignBottom="@+id/tv_price"
+		        android:text="元/吨"
+		        android:textColor="@color/font_gray"
+		        android:textSize="13sp"
+                />
+            
+            <TextView 
+                android:id="@+id/tv_company"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/tv_type"
+		        android:layout_marginTop="10dp"
+		        android:text="上海凝光钢贸有限公司"
+		        android:textColor="@color/font_gray"
+		        android:textSize="13sp"
+                />
+            
+            <TextView 
+                android:id="@+id/tv_sell"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignLeft="@+id/tv_price"
+		        android:layout_below="@+id/tv_price"
+		        android:layout_marginTop="7dp"
+		        android:text="已卖出760吨"
+		        android:textColor="@color/font_gray"
+		        android:textSize="13sp"
+                />
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    
+    <LinearLayout
+            android:id="@+id/item_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent">
+	<include
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        layout="@layout/include_huanxin_layout" /> 
+       
+    </LinearLayout>
+   
+    
+    
+
+</LinearLayout>

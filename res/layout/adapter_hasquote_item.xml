@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_layout_hasbuy"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_item_selector"
+    android:orientation="horizontal">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:tag="tag1">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_phone"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#f7e79c"-->
+            <!--android:paddingLeft="25dp"-->
+            <!--android:paddingRight="25dp"-->
+            <!--android:src="@drawable/item_phone"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_shejiao"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#4cd964"-->
+            <!--android:paddingLeft="25dp"-->
+            <!--android:paddingRight="25dp"-->
+            <!--android:src="@drawable/item_msg"/>-->
+
+    <!--</LinearLayout>-->
+
+<!--     <include
+        layout="@layout/include_huanxin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        /> -->
+
+    <LinearLayout
+        android:id="@+id/ll_hasquotelayout_item"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_head_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!--<com.mysteel.banksteel.view.ui.CircleImageView-->
+                <!--android:id="@+id/circle"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:src="@drawable/tou"-->
+                <!--/>-->
+
+            <ImageView
+                android:id="@+id/img_hasbuy_circle"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/nophoto"
+                android:scaleType="fitXY"
+                />
+
+
+            <ImageView
+                android:id="@+id/img_up"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/gray_tou"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <!-- 姓名-->
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="风轻云淡"
+                    android:textColor="@color/font_black_two"
+                    android:textSize="16sp"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_renzheng"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="10dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/left_menu_vip"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_renzheng"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="已认证"-->
+                    <!--android:textColor="@color/font_black_one"-->
+                    <!--android:textSize="16sp"/>-->
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="上海宁光钢贸有限公司"
+                android:textColor="@color/font_black_two"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <!-- 价格-->
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="3500"
+                    android:textColor="@color/main_imred"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_danwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="元/吨"
+                    android:singleLine="true"
+                    android:textColor="@color/font_black_two"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_yijia"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="可议价"
+                android:textColor="@color/main_imred"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            layout="@layout/include_huanxin_layout" />
+    </LinearLayout>
+
+
+</LinearLayout>

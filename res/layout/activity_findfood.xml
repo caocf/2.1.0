@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/head_common_layout"/>
+
+    <!-- 首页头部切换 -->
+    <LinearLayout
+        android:id="@+id/ll_qiehuan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/include_layout"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_jingzhun_fd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_jingzhun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/current_down"
+                android:gravity="center"
+                android:text="精准找货"
+                android:textColor="@color/main_imred"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_yuying_fd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_yuying"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/default_up"
+                android:gravity="center"
+                android:text="语音找货"
+                android:textColor="@color/main_font_gray"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.mysteel.banksteel.view.ui.MyViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_qiehuan_layout"/>
+
+
+</RelativeLayout>

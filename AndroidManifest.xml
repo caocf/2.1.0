@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.mysteel.banksteeltwo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="7"
+    android:versionName="3.0.0">
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="18"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <permission
+        android:name="com.mysteel.banksteeltwo.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <!-- 录音需要的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 定位需要的额外权限 -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.mysteel.banksteeltwo.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name="com.mysteel.banksteel.common.BankSteelApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 发布求购 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.PublishDemandActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 选择品种 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SelectTypeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme2"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 展示图片 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.AlbumImagesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 求购详情 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BuyDetailInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+
+        <!-- 选择厂商和城市 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BrandCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <!-- 选择货源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SelectProSourceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 上传凭证 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.UploadCertificateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <!-- 积分兑换，兑换产品列表 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.PresentsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 邀请好友页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ShareAppActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 邀请码页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.InviteCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 订单中心 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OrderCentreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 新的订单中心 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OrderCenterMergeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OrderDetailsMatchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MyAssessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.CheckProofActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.HumanServeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SpeechFindGoodsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SteelCircleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MyScoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.EarnScoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.UserSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResetPasswordActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MyInfoActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.AddressListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SuggestActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MessageCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <!-- 新版消息中心 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MsgCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.EditorAddressActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.FillOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.CityPickActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BindPhoneNumActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.DetailStanBuyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 我的求购页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MyBuyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SetPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.FindPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.PhoneVerificationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ComfirePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 登陆页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme2"
+            android:screenOrientation="portrait"/>
+        <!-- 关于我们页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.AboutUsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme2"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 更换手机号页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ChangePhoneNumberActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MatchFindGood"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.EditOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.AdvertActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OrderStopActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.StayQuoteBuyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.MatchServerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.VoiceRecognizeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.PushOrderDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.FunctionAndIntroduceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- 找货页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.FindFoodActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- 搜索资源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+
+        <!-- 根据关键字搜索 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceKeyWordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+
+        <!-- 资源详情 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResouceDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 查看某个人的资源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceOtherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 签订意向单弹框 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResouceDetailSubmitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle2"/>
+
+        <!-- 筛选弹窗 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"/>
+
+        <!-- 大分类筛选 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningFenleiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"
+            />
+        <!-- 品类筛选 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningPinleiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"
+            />
+        <!-- 材质筛选 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningCaizhiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"
+            />
+
+        <!-- 规格筛选 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningGuigeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"
+            />
+
+        <!-- 品牌选择和存货地选择 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ScreeningPinpaiChandiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"
+            />
+
+        <!-- 卖家同城报价 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LocalQuotedPriceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 买家同类资源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceSameBuyersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 卖家同类资源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceSameSellerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 从订单中心跳过去的卖家同类资源 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ResourceOrderSameSellerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+        <!-- 更多商机 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OpportunityMoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 更多商机的筛选 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.OpportunityScreeningActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle"/>
+
+        <!-- 同城和更多的详情 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SellSourceDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+        <!-- 提醒设置 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.RemindSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 提醒设置之分类选择 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.FenleiSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 同城设置3个种类 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LocalFenleiSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 提醒设置之城市选择 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.QuyuSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 查看好友的个人中心 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ShowUserInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+        <!-- 求购单重新发布页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BuyAgainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 求购单以报价页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BuyHasQuoteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"
+            />
+
+        <!-- 卖家报价信息页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SellQuoteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 意向订单详情页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.IntentionOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 已完成订单详情页面 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.CompleteOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 物流页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 物流询价页面没有下单功能-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsFindFoodActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:theme="@style/AppTheme2"/>
+
+
+        <!-- 自助下单-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsSelfOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 查看订单详情-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsSelfOrderShowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.TextActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent_activitybg"/>
+
+        <!-- 买家求购详情中 报价的详情页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BuyQuoteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 卖家中心-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SellOrderCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 卖家中心报价单详情页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SellBaoJaoDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 卖家意向单详情页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.SellIntentionDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 物流选择市 和 区的页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsChooseCityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 物流选择货物类型页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ChooseFoodTypeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 评价页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BuyAssessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent_activitybg"/>
+
+        <!-- 物流跟踪页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsTrackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 物流评价页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.LogisticsAssessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!-- 环信 -->
+        <!-- 商情互动 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.HXMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 聊天 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 显示图片 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ShowBigImage"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 定位 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 下载图片 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ShowNormalFileActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 清空聊天记录 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+
+        <!-- 发布求购确认页面-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.CommitBuyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent_activitybg"/>
+
+        <!-- 查看同类资源 暂时没用-->
+
+        <!--  选择有效期-->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ValidityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+
+        <!--  申请提货 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.ApplyGoodsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+        <!--  等待付款 -->
+        <activity
+            android:name="com.mysteel.banksteel.view.activity.WaitingPayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1104594561"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <!-- 微信回调Activity -->
+        <activity
+            android:name="com.mysteel.banksteeltwo.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- For test only 测试高级功能 -->
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity android:name="com.mysteel.banksteel.view.activity.PushReceiveActivity">
+            <intent-filter>
+                <action android:name="jpush.testAction"/>
+
+                <category android:name="jpush.testCategory"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.mysteel.banksteeltwo"/>
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.mysteel.banksteeltwo"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.mysteel.banksteel.JPush.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/>
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.mysteel.banksteeltwo"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5551746e67e58ecb080004f1">
+        </meta-data>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="17f79da17452ca59868ca01e"/>
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data android:name="EASEMOB_APPKEY"  android:value="banksteelassistant#banksteelphone" />
+        <!-- 声明sdk所需的service SDK核心功能-->
+        <service android:name="com.easemob.chat.EMChatService" />
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- IGmZpPiQtZLuFT6PwoUlGmUH || 3ecea51f560650b1ed8a4b99808f52e8-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UoG85ufrqKfEuuSdi8h2cQmb" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="57b4972c8d8dce4d5b661b89291f0f8f"/>
+    </application>
+
+</manifest>

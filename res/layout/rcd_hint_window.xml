@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/voice_rcd_hint_rcding"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:alpha="0.7"
+        android:background="@drawable/box"
+        android:gravity="bottom|center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最长录音50秒"
+            android:textColor="@color/font_white_one"
+            android:textSize="20sp" />
+
+        <Chronometer
+            android:id="@+id/timedown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05:00"
+            android:textColor="@color/orange"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/amp1" />
+    </LinearLayout>
+
+</LinearLayout>

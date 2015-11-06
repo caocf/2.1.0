@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:background="@color/font_white_one"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/two_btn_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="test_title"
+        android:textColor="#ff222222"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/two_btn_desc"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/two_btn_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:maxHeight="300dp"
+        android:text="test_content"
+        android:textColor="#ff777777"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/two_btn_top_line"
+        android:layout_width="270dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/two_btn_desc"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:background="#ffb2b2b2" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/two_btn_top_line"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancle_btn"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/font_blue"
+            android:textSize="18dp" />
+
+        <View
+            android:id="@+id/button_devide_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ffb2b2b2" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/font_blue"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</RelativeLayout>

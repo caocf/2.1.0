@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_QQZone_1-631de2c027991deae8fe72381544df5d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/jpush-sdk-release1.7.4-31b9269a14de8ecb1f10260a54ffc369.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/xUtils-2.6.14-c2b169906f603d6acf356e47de9e5adb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_WeiXin_1-efb7f00481559be83e3f3d93348aec19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/Android_Location_V1.3.2-3b9d77162914731b45dfd51945db0ed9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_QQZone_2-fba3c591a8acc544152a3096571707a0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_sms-456d2eb6a1549924010f77fecfa8b28c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/umeng_social_sdk-3488ea0e1ec9dfdc0385da31ab20e6d2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_WeiXin_2-1832e59b54530f0dcf00b385f729e807.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_QQZone_3-37df3a5c856cf4dc91696d30facd6464.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/httpmime-4.1.3-6ebd3da01679556b672bdc9c47cdfaa2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/SocialSDK_Sina-883d593703e5479f0440ba6d38e7491b.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

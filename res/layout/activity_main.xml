@@ -1,0 +1,26 @@
+<com.mysteel.banksteel.view.ui.DragLayout android:id="@+id/main_draglayout"
+                                          xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:tools="http://schemas.android.com/tools"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent"
+                                          android:background="@color/sliding_bottom_bg"
+                                          android:clickable="true"
+                                          android:orientation="vertical"
+                                          android:fitsSystemWindows="true">
+
+    <!-- 左侧菜单页面 -->
+
+    <include layout="@layout/redide_leftmenu"/>
+
+    <com.mysteel.banksteel.view.ui.MyRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical">
+
+        <!-- headbanner -->
+
+        <include layout="@layout/redide_middleview"/>
+    </com.mysteel.banksteel.view.ui.MyRelativeLayout>
+
+</com.mysteel.banksteel.view.ui.DragLayout>

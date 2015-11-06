@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:background="@color/font_black_three"
+    >
+
+    <Button
+        android:id="@+id/z_wheel_ok"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/findfood"
+        android:text="完成"
+        android:textColor="@color/font_white_one"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.mysteel.banksteel.view.ui.wheel.WheelView
+            android:id="@+id/z_wheel_first"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1.0"  />
+    </LinearLayout>
+</LinearLayout>

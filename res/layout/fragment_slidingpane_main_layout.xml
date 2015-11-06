@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_common_layout"/>
+
+        <!-- 广告 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true">
+
+                <com.mysteel.banksteel.view.ui.CustomGalleryView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+                <TextView
+                    android:id="@+id/tv_adtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:background="#00ffffff"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.2dp"-->
+        <!--android:background="@color/footer_color" />-->
+
+        <!-- 整体布局的显示与隐藏-->
+        <LinearLayout
+            android:id="@+id/ll_all_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_ziyuan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:background="@drawable/shouye_bag"
+                >
+
+                <TextView
+                    android:id="@+id/tv_taday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="center_vertical"
+                    android:text="今日发布资源"
+                    android:textColor="@color/font_white_one"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_taday"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/font_white_one"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/tv_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/tv_data"
+                    android:gravity="center_vertical"
+                    android:text="条"
+                    android:textColor="@color/font_white_one"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+            <!--<ListView-->
+            <!--android:id="@+id/list_item"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="2"-->
+            <!--android:dividerHeight="0.2dp"-->
+            <!--android:fadingEdge="none"-->
+            <!--android:footerDividersEnabled="false"-->
+            <!--android:listSelector="@drawable/layout_item_selector"/>-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.2dp"-->
+            <!--android:background="@color/footer_color"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <!-- 搜索资源-->
+                <LinearLayout
+                    android:id="@+id/ll_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/layout_item_selector"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_search_menu"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/search_shouye"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_search_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_menu_textsearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|bottom"
+                            android:text="搜索资源"
+                            android:textColor="#333333"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_textsearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:text="每日海量资源可供浏览，提供在线联系交易，打造专业平台"
+                            android:textColor="@color/main_font_gray"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/arrow_imageView"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="15dp"-->
+                        <!--android:src="@drawable/right_arrow"/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view01"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/main_font_gray"/>
+
+                <!-- 我的求购-->
+                <LinearLayout
+                    android:id="@+id/ll_buy_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/layout_item_selector"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_buy_menu"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/buy_shouye"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_buy_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_menu_textbuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|bottom"
+                            android:text="我要求购"
+                            android:textColor="#333333"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_textbuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:maxLines="2"
+                            android:text="精准资源定位，语音求购功能，在线即时获取最新咨询"
+                            android:textColor="@color/main_font_gray"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="15dp"-->
+                        <!--android:src="@drawable/right_arrow"/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view02"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/main_font_gray"/>
+
+                <!-- 订单中心-->
+                <LinearLayout
+                    android:id="@+id/ll_order_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/layout_item_selector"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_order_menu"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/order_shouye_nopoint"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_order_textbuy"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="订单中心"
+                        android:textColor="#333333"
+                        android:textSize="20sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_buy_order"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/set_point_red"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:textColor="@color/font_white_one"
+                            android:visibility="gone"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 卖家布局-->
+        <include
+            android:id="@+id/view_include_layout"
+            layout="@layout/sell_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            ></include>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

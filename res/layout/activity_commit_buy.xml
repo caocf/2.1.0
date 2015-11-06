@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_layout_left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/setpingjia"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="确认发布求购"
+            android:textColor="@color/main_imred"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_jieshao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="建筑用钢-三级螺纹钢 50吨 HRB335"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/font_black_one"
+            android:textSize="15sp"/>
+
+        <!-- 购买量-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="购买量："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="700"
+                android:textColor="@color/main_imred"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="吨"
+                android:textColor="@color/font_black_one"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <!-- 品牌/产地-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="品牌/产地："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_pinpai"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="安徽"
+                android:textColor="@color/font_black_one"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+
+        <!-- 交货地-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="交货地："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_jiaohuodi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="上海 宝山区"
+                android:textColor="@color/font_black_one"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+        <!-- 有效期-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="有效期："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_youxiao"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                android:background="@drawable/settextview">
+
+                <TextView
+                    android:id="@+id/tv_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="请选择"
+                    android:textColor="@color/main_imred"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_validity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="(不选默认为3天)"
+                    android:textColor="@color/font_black_two"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="联系人："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_man"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="张无忌"
+                android:singleLine="true"
+                android:textColor="@color/font_black_one"
+                android:textSize="17sp"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_phone"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="15821398481"-->
+                <!--android:textColor="@color/font_black_one"-->
+                <!--android:textSize="15sp"/>-->
+
+        </LinearLayout>
+
+        <!-- 联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="您的联系方式："
+                android:textColor="@color/font_black_two"
+                android:textSize="13sp"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_man"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="张无忌"-->
+                <!--android:textColor="@color/font_black_one"-->
+                <!--android:textSize="17sp"/>-->
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="15821398481"
+                android:singleLine="true"
+                android:textColor="@color/font_black_one"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/set_btn_gray"
+                android:text="取  消"
+                android:textColor="@color/font_white_one"
+                android:textSize="18sp"/>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/set_btn_red"
+                android:text="确  定"
+                android:textColor="@color/font_white_one"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
